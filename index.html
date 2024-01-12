@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+<script defer src="main.js"></script></head>
+<body>
+    <aside>
+        <h2>Library</h2>
+        <form>
+            <div class="inputContainer">
+                <label for = "title"> Title </label>
+                <input type= "text" id = "title" required placeholder = "League of Legends">
+            </div>
+
+            <div class="inputContainer">
+                <label for = "company"> Company </label>
+                <input type= "text" id = "company" required placeholder = "Riot Games">
+            </div>
+            
+            <div class="inputContainer">
+                <label for = "hoursplayed"> Hours Played</label>
+                <input type= "number" id = "hoursplayed" required placeholder = "5">
+            </div>
+
+            <div id = "inputContainerCheck">
+                <input type= "checkbox" id = "favorite">
+                <label for = "favorite "> Favorite </label>
+            </div>
+
+            <button type = "submit"> + </button>
+        </form>
+    </aside>
+    <div class="mainWrapper">
+        <main id = "display">
+        </main>
+    </div>
+
+</body>
+</html>
