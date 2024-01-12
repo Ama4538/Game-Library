@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --text-color: 66, 76, 85;
+    --primary-color: 29, 138, 153;
+
+    --second-font: 'Montserrat';
+    --font:'Playfair Display'
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+    color: var(--text-color);
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+}
+
+/* SideBar */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(var(--primary-color));
+    border-right: 2px solid black;
+    box-shadow: 2px 0 10px 3px rgb(0, 0, 0, 0.5);
+    padding: 2vmin;
+    width: 25%;
+    height: 100%;
+    gap: 2vmin;
+}
+
+aside > h2 {
+    align-self: center;
+    font-size: clamp(3rem, 7.5vmin, 5rem);
+}
+
+aside > form {
+    display: grid;
+    height: 80%;
+    grid-template-rows: repeat(4, min-content) min-content;
+    gap: 3vmin;
+    align-items: center;
+}
+
+.inputContainer,
+#inputContainerCheck {
+    font-size: clamp(1.5rem, 4vmin, 5rem);
+    padding-left: 3vmin;
+} 
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer > input {
+    aspect-ratio: 6 / 1;
+    font-size: clamp(1rem, 3vmin, 4rem);
+    width: 80%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid ;
+}
+
+#inputContainerCheck > input {
+    aspect-ratio: 1 / 1;
+    width: 3vmin;
+    cursor: pointer;
+}
+
+#inputContainerCheck > input:hover {
+    transform: scale(1.05);
+}
+
+input::placeholder {
+    color: rgb(var(--text-color), 1);
+}
+
+aside > form > button {
+    background-color: rgb(249, 87, 56, 0.4);
+    font-size: clamp(3rem, 5vmin, 5rem);
+    justify-self: center;
+    aspect-ratio: 1 / 0.25;
+    width: 70%;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+aside > form > button:hover {
+    transform: scale(1.025);
+}
+
+/* Main */
+
+.mainWrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    padding: 3vmin;
+    gap: 3vmin;
+    width: 100%;
+    height: 100%;
+}
+
+.games {
+    aspect-ratio: 1 / 0.9;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(var(--primary-color), 0.7);
+    border-radius: 0.5rem;
+    padding: 2vmin;
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 7px 3px rgb(0, 0, 0, 0.5);
+}
+
+.games > * {
+    font-family: var(--second-font);
+}
+
+.games > h1,
+.games > h3 {
+    grid-column: span 2;
+}
+
+.games > h1 {
+    font-size: clamp(2rem, 6vmin, 3rem);
+    font-weight: 700;
+}
+
+.btn {
+    width: 20vmin;
+    height: 4.5vmin;
+    border: 1px solid black;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.deleteBtn {
+    background-color: #ef4444;
+    align-self: end;
+    justify-self: end;
+}
+
+.deleteBtn:hover {
+    opacity: 0.8;
+}
+
+.favoriteBtn {
+    align-self: end;
+    justify-self: start;
+}
+
+.true {
+    background-color: #22c55e;
+}
+
+.games > h3:nth-child(2) {
+    font-size: clamp(1.5rem, 3vmin, 2.5rem);
+    color: rgb(var(--text-color), 0.9);
+}
+
+.games > h3:nth-child(3) {
+    font-size: clamp(1rem, 1.75vmin, 2rem);
+    color: rgb(var(--text-color), 0.8);
+}
